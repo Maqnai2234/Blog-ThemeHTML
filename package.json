@@ -1,0 +1,24 @@
+{
+  "name": "Blog-ThemeHTML",
+  "version": "1.0.0",
+  "description": "This is a theme for ghost but in static version. (Alexei.pro)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Maqnai2234/Blog-ThemeHTML.git"
+  },
+  "keywords": [
+    "Theme",
+    "ghost",
+    "Blogging"
+  ],
+  "author": "Alexei Mamani Coaquira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maqnai2234/Blog-ThemeHTML/issues"
+  },
+  "homepage": "https://github.com/Maqnai2234/Blog-ThemeHTML"
+}
