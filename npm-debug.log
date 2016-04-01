@@ -1,19 +1,29 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/Users/alexei/.nvm/v0.10.40/bin/node',
 1 verbose cli   '/Users/alexei/.nvm/v0.10.40/bin/npm',
-1 verbose cli   'start' ]
+1 verbose cli   'uninstall',
+1 verbose cli   '--save',
+1 verbose cli   'gulp-livereload' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.40
-4 error Error: ENOENT, open '/Users/alexei/Project/Blog-ThemeHTML/package.json'
-5 error If you need help, you may report this *entire* log,
-5 error including the npm and node versions, at:
-5 error     <http://github.com/npm/npm/issues>
-6 error System Darwin 14.0.0
-7 error command "/Users/alexei/.nvm/v0.10.40/bin/node" "/Users/alexei/.nvm/v0.10.40/bin/npm" "start"
-8 error cwd /Users/alexei/Project/Blog-ThemeHTML
-9 error node -v v0.10.40
-10 error npm -v 1.4.28
-11 error path /Users/alexei/Project/Blog-ThemeHTML/package.json
-12 error code ENOENT
-13 error errno 34
-14 verbose exit [ 34, true ]
+4 verbose node_modules/gulp-livereload unbuild
+5 info preuninstall gulp-livereload@3.8.1
+6 info uninstall gulp-livereload@3.8.1
+7 verbose true,/Users/alexei/Project/Blog-ThemeHTML/node_modules,/Users/alexei/Project/Blog-ThemeHTML/node_modules unbuild gulp-livereload@3.8.1
+8 info postuninstall gulp-livereload@3.8.1
+9 error Error: EACCES, unlink '/Users/alexei/Project/Blog-ThemeHTML/node_modules/gulp-livereload/node_modules/chalk/node_modules/.bin/has-ansi'
+9 error  { [Error: EACCES, unlink '/Users/alexei/Project/Blog-ThemeHTML/node_modules/gulp-livereload/node_modules/chalk/node_modules/.bin/has-ansi']
+9 error   errno: 3,
+9 error   code: 'EACCES',
+9 error   path: '/Users/alexei/Project/Blog-ThemeHTML/node_modules/gulp-livereload/node_modules/chalk/node_modules/.bin/has-ansi' }
+10 error Please try running this command again as root/Administrator.
+11 error System Darwin 14.0.0
+12 error command "/Users/alexei/.nvm/v0.10.40/bin/node" "/Users/alexei/.nvm/v0.10.40/bin/npm" "uninstall" "--save" "gulp-livereload"
+13 error cwd /Users/alexei/Project/Blog-ThemeHTML
+14 error node -v v0.10.40
+15 error npm -v 1.4.28
+16 error path /Users/alexei/Project/Blog-ThemeHTML/node_modules/gulp-livereload/node_modules/chalk/node_modules/.bin/has-ansi
+17 error code EACCES
+18 error errno 3
+19 error stack Error: EACCES, unlink '/Users/alexei/Project/Blog-ThemeHTML/node_modules/gulp-livereload/node_modules/chalk/node_modules/.bin/has-ansi'
+20 verbose exit [ 3, true ]
