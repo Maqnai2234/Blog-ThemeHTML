@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     minifyCss = require('gulp-minify-css'),
     connect = require('gulp-connect'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
     gulpif = require('gulp-if');
 
 var livereload = false;
@@ -22,14 +22,20 @@ gulp.task('stylus', function () {
     .pipe(gulpif(livereload, connect.reload()))
 });
 
-//Reload cuando cambia un archivo html
+// Reload cuando cambia un archivo html
 
 gulp.task('html', function () {
   gulp.src('./*.html')
     .pipe(connect.reload());
 });
 
-//Levantar servidor con livereload
+// Reload cuando cambia un archivo js
+gulp.task('js', function () {
+  gulp.src('./assets/js-dev/*.js')
+    .pipe(connect.reload());
+});
+
+// Levantar servidor con livereload
 gulp.task('connect', function () {
   connect.server({
     root: '.',
@@ -41,12 +47,13 @@ gulp.task('connect', function () {
 })
 
 
-//Gulp Watch
+// Gulp Watch
 gulp.task('watch', function() {
-  gulp.watch('./assets/stylus/*.styl', ['stylus']);
   gulp.watch(['./*.html'], ['html']);
+  gulp.watch('./assets/stylus/*.styl', ['stylus']);
+  gulp.watch('./assets/js/*.js', ['js']);
 })
 
-//Default gulp
+// Default gulp
 
 gulp.task('default', ['connect', 'watch']);
