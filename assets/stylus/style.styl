@@ -1,8 +1,8 @@
-
 /* *********  PRINCIPAL  ***********
 
     0. Imports vendors
-    0. Modules
+    1. Modules
+    2. Styles
 ********************
 */
 
@@ -11,9 +11,105 @@
 @import "normalize"
 
 // **********************************
-
 // *********  1. Modules   ***********
 
+@import "variables"
 @import "default"
 
+// **********************************
+
+// *********  2. Styles   ***********
+
+.FixMenu
+  background fixedMenuColor
+  &-list
+    padding 1em 0
+    margin 0
+  &-element
+    list-style none
+    display block
+    padding 1em .5em
+  &-menuActive
+      color white !important
+  &-link
+    color #d1d1d1
+    text-decoration none
+    text-transform uppercase
+    font-family 'Kanit', sans-serif
+    &:hover
+      color white
+
+.CoverFull
+  height 50vh
+.Layout
+  &-header
+    display flex
+    flex-direction column
+  &-wrapper
+    padding 0 1em
+    max-width 1100px auto
+    margin 0 auto
+
+.TopHeader
+  align-self center
+  &-iconMenu
+    color white
+    font-size 1.5em
+.Main
+  padding .5em 1.4em
+.Post
+  margin 1em 0
+  &-cover
+    width 100%
+    height: 250px
+    background-repeat: no-repeat;
+  &-mainContent
+    padding .8em
+    background white
+    box-shadow 1px 1px 6px rgba(0,0,0,0.5)
+  &-details
+    display flex
+    justify-content space-between
+  &-detailsText
+    text-transform uppercase
+    color postDetailColor
+    font-family 'Kanit', sans-serif
+    padding 0
+    margin 0
+  &-span
+    text-transform lowercase
+    font-style italic
+    font-size .8em
+  &-title
+    text-transform uppercase
+    font-weight 800
+    a
+      text-decoration none
+      color postTitleColor
+  &-content
+    color postTextColor
+    font-weight 300
+
+.Button
+  &-more
+    background transparent
+    display table
+    border 3px solid transparent
+    color: #3d90f7
+    margin 1em 0
+    font-size .85em
+    font-weight 500
+    font-family 'Kanit', sans-serif
+    text-decoration none
+    text-transform uppercase
+    letter-spacing 1px
+    transition all 300ms linear 0s
+    border-image linear-gradient(to left, #3d90f7  0%, #613df7 100%)
+    border-image-slice 1
+    &:hover
+      background linear-gradient(to left, #3d90f7  0%, #613df7 100%)
+      color: white
+
+  &-n
+    padding .6em 2em
 // **********************************
