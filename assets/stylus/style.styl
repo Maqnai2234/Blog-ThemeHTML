@@ -2,7 +2,8 @@
 
     0. Imports vendors
     1. Modules
-    2. Styles
+    2. Layout
+    3. Header
 ********************
 */
 
@@ -18,7 +19,25 @@
 
 // **********************************
 
-// *********  2. Styles   ***********
+// *********  2. Layout   ***********
+
+.Layout
+  &-header
+    display flex
+    padding 0 1em
+    flex-direction column
+    align-items center
+    height 100%
+  &-footer
+    background white
+    box-shadow -1px 0 5px rgba(0,0,0,0.5)
+  &-wrapper
+    max-width 1100px
+    margin 0 auto
+
+// **********************************
+
+// *********  3. Header   ***********
 
 .FixMenu
   background fixedMenuColor
@@ -28,7 +47,6 @@
   &-element
     list-style none
     display block
-    padding 1em .5em
   &-menuActive
       color white !important
   &-link
@@ -36,27 +54,88 @@
     text-decoration none
     text-transform uppercase
     font-family 'Kanit', sans-serif
+    padding 1em .5em
+    display block
+    font-weight 400
     &:hover
       color white
+      background rgba(fixedMenuColor,0.2)
 
 .CoverFull
-  height 50vh
-.Layout
-  &-header
-    display flex
-    flex-direction column
-  &-wrapper
-    padding 0 1em
-    max-width 1100px auto
-    margin 0 auto
+  height 60vh
+
+.MainMenu
+  margin-top 1em
+  display flex
+  justify-content space-between
+  align-items center
+  width 100%
+  &-social
+    width 33.333%
+  &-logo
+    width 33.333%
+    text-align center
+  &-imgLogo
+    width 60px
+  &-search
+    width 33.333%
+    text-align right
+  &-iconSearch
+    color white
+    font-size 1.5em
+    width 33.333%
+
+
+.SocialLinks
+  &-icon
+    color white
+    text-decoration none
+    font-size 1.15em
+    padding-left .2em
+  &--footer
+    color grey
+    font-size 1.5em
 
 .TopHeader
   align-self center
+  margin-top 1em
+  &-list
+    display none
   &-iconMenu
     color white
-    font-size 1.5em
+    font-size 1.6em
+
+.PostFull
+  margin-top 1em
+  height 80%
+  width 100%
+  display flex
+  justify-content flex-end
+  flex-direction column
+  &-details
+    color rgba(255,255,255,.9)
+    text-transform uppercase
+    font-weight 300
+    font-size .9em
+    font-family 'Kanit', sans-serif
+    margin 0
+  &-altText
+    font-style italic
+    text-transform lowercase
+  &-title
+    margin .5em 0 0 0
+    a
+      color white
+      text-decoration none
+      letter-spacing 1px
+      font-size 1.4em
+// **********************************
+
 .Main
   padding .5em 1.4em
+.Sidebar
+  padding .5em 1.4em
+
 .Post
   margin 1em 0
   &-cover
@@ -90,12 +169,177 @@
     color postTextColor
     font-weight 300
 
+.CardAuthor
+  padding 4em .8em 1em
+  background white
+  box-shadow 1px 1px 6px rgba(0,0,0,0.5)
+  margin 3em 0 1em 0
+  position relative
+  text-align center
+  &-photo
+    position absolute
+    top -57px
+    left 50%
+    transform translateX(-50px)
+    width 100px
+    border-radius 100%
+  &-name
+    font-size 1.6em
+    margin 0
+  &-subtitle
+    text-transform uppercase
+    font-family 'Kanit', sans-serif
+    font-size .89em
+    margin 0
+    color postDetailColor
+  &-description
+    text-align left
+    margin .5em 0
+  &-more
+    color #613df7
+    text-decoration none
+    text-transform uppercase
+    font-family 'Kanit', sans-serif
+    margin .5em 0
+    display block
+    transition 100ms all linear
+    &:hover
+      color #3d90f7
+  &-iconSocial
+    text-decoration none
+    font-size 1.5em
+    color postTextColor
+    transition 100ms all ease-in
+    &:hover
+      color: black;
+
+.FeedSocial
+  display flex
+  flex-direction column
+  margin 1em 0
+  height 250px
+  padding .2em 1em
+  justify-content: space-between;
+  &--twitter
+    background twitterColor
+  &-top
+    display flex
+    align-content center
+    align-items center
+    justify-content space-between
+  &-textTop
+    color white
+    text-transform uppercase
+    font-family 'Kanit', sans-serif
+    font-size .7em
+  &-linkAccount
+    color white
+    text-transform uppercase
+    text-decoration none
+    font-size .7em
+    font-family 'Kanit', sans-serif
+  &-mid
+    display flex
+    justify-content center
+    align-content center
+    align-items center
+    height 200px
+  &-midText
+    margin 0
+    color white
+    font-style italic
+    text-decoration none
+    font-size 1.7em
+  &-follow
+    text-align center
+    color white
+    text-transform uppercase
+    text-decoration none
+    font-weight 500
+    font-size .9em
+    font-family 'Kanit', sans-serif
+
+.SuscribeWidget
+  padding 1em
+  background linear-gradient(to left, #3d90f7  0%, #613df7 100%)
+  color white
+  &-mainText
+    text-align center
+    text-transform uppercase
+    font-size 1.3em
+    margin 0
+  &-subtitle
+    color white
+  &-form
+    width 100%
+  &-input
+    border none
+    width 100%
+    margin .5em 0
+    background transparent
+    color white
+    border-bottom 1px solid white
+    padding .8em .5em
+    box-sizing border-box
+    &:before
+      content ""
+      background white
+    &:focus
+      outline none
+  &-submit
+    background transparent
+    display table
+    border 2px solid white
+    color: white
+    margin 1em 0
+    font-size .85em
+    font-weight 500
+    font-family 'Kanit', sans-serif
+    text-decoration none
+    text-transform uppercase
+    letter-spacing 1px
+    padding .6em 1.5em
+    transition all 100ms linear
+    &:hover
+      background white
+      color #613df7
+
+.MainFooter
+  padding 1em
+  display flex
+  flex-direction column
+  &-top
+    display flex
+    justify-content space-between
+    flex-direction column
+  &-col2
+    text-align center
+
+.MenuFooter
+  &-list
+    display flex
+    flex-wrap wrap
+  &-element
+    list-style none
+    width 50%
+    a
+      color #808080
+      text-transform uppercase
+      font-family 'Kanit', sans-serif
+      font-weight 400
+      padding 1em 0
+  &-copyrightText
+    text-align center
+    color #613df7
+    font-family 'Kanit', sans-serif
+    font-size .9em
+
 .Button
   &-more
     background transparent
     display table
     border 3px solid transparent
-    color: #3d90f7
+    color: #613df7
     margin 1em 0
     font-size .85em
     font-weight 500
@@ -109,7 +353,8 @@
     &:hover
       background linear-gradient(to left, #3d90f7  0%, #613df7 100%)
       color: white
-
   &-n
     padding .6em 2em
-// **********************************
+
+.center
+  text-align center

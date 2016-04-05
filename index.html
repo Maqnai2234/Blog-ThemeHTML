@@ -29,7 +29,7 @@
           </li>
         </ul>
       </nav>
-      <div class="Layout-container CoverFull" style="background: url('./assets/images/coverFull.jpg'); background-size: cover;)">
+      <div class="CoverFull" style="background: linear-gradient(to bottom, rgba(0,0,0,.77) 0%,rgba(0,0,0,0.35) 50%,rgba(0,0,0,0.77) 100%), url('./assets/images/coverFull.jpg'); background-size: cover;)">
         <header class="Layout-header Layout-wrapper">
           <nav class="TopHeader">
             <ul class="TopHeader-list">
@@ -43,45 +43,48 @@
             <div class="MainMenu-social">
               <div class="SocialLinks">
                 <a href="" class="SocialLinks-icon">
-                  f
+                  <i class="fa fa-facebook-square"></i>
                 </a>
                 <a href="" class="SocialLinks-icon">
-                  t
+                  <i class="fa fa-twitter-square"></i>
                 </a>
                 <a href="" class="SocialLinks-icon">
-                  y
+                  <i class="fa fa-youtube-square"></i>
                 </a>
                 <a href="" class="SocialLinks-icon">
-                  g
+                  <i class="fa fa-google-plus-square"></i>
                 </a>
                 <a href="" class="SocialLinks-icon">
-                  i
+                  <i class="fa fa-instagram"></i>
                 </a>
               </div>
             </div>
             <div class="MainMenu-logo">
-              <img src="" alt="" class="MainMenu-imgLogo">
+              <a href="#">
+                <img src="./assets/images/logo-alexei.png" alt="" class="MainMenu-imgLogo">
+              </a>
             </div>
             <div class="MainMenu-search">
               <a href="" class="MainMenu-iconSearch">
-                *
+                <i class="fa fa-search"></i>
+              </a>
+            </div>
+          </div>
+          <div class="PostFull">
+            <p class="PostFull-details">
+              <span class="PostFull-altText"> por </span> Alexei Mamani | 25 FEB 2016
+            </p>
+            <h3 class="PostFull-title">
+              <a href="">GhostHunter: Un motor de búsqueda para Ghost</a>
+            </h3>
+            <div class="Button">
+              <a href="#" class="Button-more Button-n">
+                Leer Más
               </a>
             </div>
           </div>
         </header>
-        <div class="PostFull">
-          <p class="PostFull-details">
-            <span class="PostFull-altText"> por </span> Alexei Mamani | 25 FEB 2016
-          </p>
-          <h3 class="PostFull-title">
-            <a href="">GhostHunter: Un motor de búsqueda para Ghost</a>
-          </h3>
-          <div class="Button">
-            <a href="#" class="Button-more Button-n">
-              Leer Más
-            </a>
-          </div>
-        </div>
+
       </div>
       <div class="Layout-main">
         <div class="Main">
@@ -184,33 +187,33 @@
         </div>
         <div class="Sidebar">
           <div class="CardAuthor">
-            <img src="#" alt="" class="CardAuthor-photo">
+            <img src="./assets/images/photoauthor.jpg" alt="" class="CardAuthor-photo">
             <h4 class="CardAuthor-name">Alexei Mamani</h4>
             <p class="CardAuthor-subtitle">Developer</p>
             <p class="CardAuthor-description">Me gusta demasiado la programación, amante de la música, UI/UX algo que me encanta demasiado, autodidacta, videojuegos tipo MOBA, le estoy agarrando gusto a la fotografía</p>
             <a href="" class="CardAuthor-more">Mas sobre mí</a>
             <div class="CardAuthor-social">
               <a href="#" class="CardAuthor-iconSocial">
-                f
+                <i class="fa fa-facebook-square"></i>
               </a>
               <a href="#" class="CardAuthor-iconSocial">
-                t
+                <i class="fa fa-twitter-square"></i>
               </a>
               <a href="#" class="CardAuthor-iconSocial">
-                y
+                <i class="fa fa-youtube-square"></i>
               </a>
               <a href="#" class="CardAuthor-iconSocial">
-                g
+                <i class="fa fa-google-plus-square"></i>
               </a>
               <a href="#" class="CardAuthor-iconSocial">
-                i
+                <i class="fa fa-instagram"></i>
               </a>
             </div>
           </div>
           <div class="FeedSocial FeedSocial--twitter">
             <div class="FeedSocial-top">
               <p class="FeedSocial-textTop">
-                <span class="FeedSocial-iconTwitter">T</span> Última publicación de Twitter
+                <span class="FeedSocial-iconTwitter"><i class="fa fa-twitter"></i></span> Última publicación de Twitter
               </p>
               <a href="#" class="FeedSocial-linkAccount">@alexeidev</a>
             </div>
@@ -221,12 +224,14 @@
               Sigueme
             </a>
           </div>
-          <div class="FeedSocial FeedSocial--instagram">
+          <div class="FeedSocial FeedSocial--instagram" style="background: linear-gradient(to bottom, rgba(0,0,0,.57) 0%,rgba(0,0,0,0.35) 50%,rgba(0,0,0,0.77) 100%), url('./assets/images/photoauthor.jpg'); background-size: cover;)">
             <div class="FeedSocial-top">
               <p class="FeedSocial-textTop">
                 Instagram feed
               </p>
               <a href="#" class="FeedSocial-linkAccount">@alexeidev</a>
+            </div>
+            <div class="FeedSocial-mid">
             </div>
             <a href="" class="FeedSocial-follow">
               Sigueme
@@ -244,57 +249,62 @@ mejor de ya sabes XD!</p>
           </div>
         </div>
       </div>
-      <footer class="MainFooter">
-        <div class="MainFooter-vertical">
-          <div class="MainFooter-col2">
-            <img src="#" alt="Logo Alexei" class="imgLogoFooter">
-            <p class="text">Ruby - Javascript - HTML5 - CSS3 -Videojuegos - Nodejs</p>
+      <footer class="Layout-footer">
+        <div class="MainFooter Layout-wrapper">
+          <div class="MainFooter-top">
+            <div class="MainFooter-col2">
+              <img src="./assets/images/logoTextAzul.png" alt="Logo Alexei" class="imgLogoFooter">
+              <p class="text">Ruby - Javascript - HTML5 - CSS3 -Videojuegos - Nodejs</p>
+            </div>
+            <div class="MainFooter-col2">
+              <a href="">
+                <img src="./assets/images/logoVultr.png" alt="Logo Vultr" class="imgLogoFooter">
+              </a>
+
+              <p class="text">Publicado en <a href="#">Ghost</a> y Alojado en <a href="#">Vultr</a> </p>
+            </div>
           </div>
-          <div class="MainFooter-col2">
-            <img src="#" alt="Logo Vultr" class="imgLogoFooter">
-            <p class="text">Publicado en <a href="#">Ghost</a> y Alojado en <a href="#">Vultr</a> </p>
+          <div class="MainFooter-bottom">
+            <div class="SocialLinks center">
+              <a href="" class="SocialLinks-icon SocialLinks--footer">
+                <i class="fa fa-facebook-square"></i>
+              </a>
+              <a href="" class="SocialLinks-icon SocialLinks--footer">
+                <i class="fa fa-twitter-square"></i>
+              </a>
+              <a href="" class="SocialLinks-icon SocialLinks--footer">
+                <i class="fa fa-youtube-square"></i>
+              </a>
+              <a href="" class="SocialLinks-icon SocialLinks--footer">
+                <i class="fa fa-google-plus-square"></i>
+              </a>
+              <a href="" class="SocialLinks-icon SocialLinks--footer">
+                <i class="fa fa-instagram"></i>
+              </a>
+            </div>
+            <nav class="MenuFooter">
+              <ul class="MenuFooter-list">
+                <li class="MenuFooter-element">
+                  <a href="#" class="href">Inicio</a>
+                </li>
+                <li class="MenuFooter-element">
+                  <a href="#" class="href">Agenda</a>
+                </li>
+                <li class="MenuFooter-element">
+                  <a href="#" class="href">Contactos</a>
+                </li>
+                <li class="MenuFooter-element">
+                  <a href="#" class="href">Videos</a>
+                </li>
+                <li class="MenuFooter-element">
+                  <a href="#" class="href">Sobre Mí</a>
+                </li>
+              </ul>
+            </nav>
+            <p class="MenuFooter-copyrightText">
+              (C) ALEXEI.PRO 2016
+            </p>
           </div>
-        </div>
-        <div class="MainFooter-vertical">
-          <div class="SocialLinks">
-            <a href="" class="SocialLinks-icon SocialLinks--grey">
-              f
-            </a>
-            <a href="" class="SocialLinks-icon SocialLinks--grey">
-              t
-            </a>
-            <a href="" class="SocialLinks-icon SocialLinks--grey">
-              y
-            </a>
-            <a href="" class="SocialLinks-icon SocialLinks--grey">
-              g
-            </a>
-            <a href="" class="SocialLinks-icon SocialLinks--grey">
-              i
-            </a>
-          </div>
-          <nav class="MenuFooter">
-            <ul class="MenuFooter-list">
-              <li class="MenuFooter-element">
-                <a href="#" class="href">Inicio</a>
-              </li>
-              <li class="MenuFooter-element">
-                <a href="#" class="href">Agenda</a>
-              </li>
-              <li class="MenuFooter-element">
-                <a href="#" class="href">Contactos</a>
-              </li>
-              <li class="MenuFooter-element">
-                <a href="#" class="href">Videos</a>
-              </li>
-              <li class="MenuFooter-element">
-                <a href="#" class="href">Sobre Mí</a>
-              </li>
-            </ul>
-          </nav>
-          <p class="MenuFooter-copyrightText">
-            (C) ALEXEI.PRO 2016
-          </p>
         </div>
       </footer>
   </div>
