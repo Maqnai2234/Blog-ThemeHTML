@@ -51,7 +51,7 @@ gulp.task('connect', function () {
 gulp.task('watch', function() {
   gulp.watch(['./*.html'], ['html']);
   gulp.watch('./assets/stylus/*.styl', ['stylus']);
-  gulp.watch('./assets/js/*.js', ['js']);
+  gulp.watch('./assets/js-dev/*.js', ['js']);
 })
 
 // Default gulp

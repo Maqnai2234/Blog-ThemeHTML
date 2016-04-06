@@ -12,12 +12,14 @@
 // *********  0. IMPORTS VENDORS  ***********
 
 @import "normalize"
+@import "animate"
 
 // **********************************
 // *********  1. Modules   ***********
 
 @import "variables"
 @import "default"
+
 
 // **********************************
 
@@ -49,7 +51,9 @@
 
 .FixMenu
   background fixedMenuColor
-  display none
+  height 0
+  overflow hidden
+  transition .7s linear height
   &-list
     padding 1em 0
     margin 0
@@ -110,8 +114,12 @@
   &-list
     display none
   &-iconMenu
+  &-closeMenu
     color white
     font-size 1.6em
+  &-closeMenu
+    display none
+    font-size 2em
 
 .PostFull
   margin 1em 0
@@ -142,6 +150,11 @@
 
 
 @media (min-width: 768px)
+  .FixMenu
+    display none
+  .TopHeader
+    &-buttons
+      display none
   .MainMenu
     &-imgLogo
       width initial
@@ -183,6 +196,9 @@
       font-size 3.4rem
       line-height 2.7rem
 
+@media (min-width: 1024px)
+  .CoverFull
+    height 640px
 // **********************************
 
 
@@ -485,6 +501,46 @@
     &-list
       flex-wrap nowrap
 
+.SearchFix
+  background rgba(30,37,42,.95)
+  position fixed
+  top 0
+  width 100vw
+  height 100vh
+  display none
+  &-icon
+    color white
+    font-size 3em
+    position absolute
+    right 1em
+    top 1em
+    cursor pointer
+    margin 0
+    padding 0
+  &-wrapper
+    padding 1em
+    max-width 1080px
+    margin 0 auto
+  &-form
+    margin 3em 1em
+  &-input
+    color white
+    padding .5em .2em
+    width 100%
+    border-box box-sizing
+    border none
+    border-bottom .5rem white solid
+    background transparent
+    font-size 3em
+    &:focus
+      outline none
+
+
 // ************ Other
 .center
   text-align center
+
+.showSearch
+  display block
+.menu-active
+  height 312px

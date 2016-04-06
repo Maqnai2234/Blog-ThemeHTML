@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="Layout">
-      <nav class="FixMenu" id="js-Menu">
+      <nav class="FixMenu animated" id="js-Menu">
         <ul class="FixMenu-list">
           <li class="FixMenu-element">
             <a href="" class="FixMenu-link FixMenu-menuActive">Inicio</a>
@@ -49,9 +49,14 @@
                 <a href="" class="TopHeader-link">Contacto</a>
               </li>
             </ul>
-            <a href="#" class="TopHeader-iconMenu" id="js-ShowMenu">
-              <i class="fa fa-bars"></i>
-            </a>
+            <div class="TopHeader-buttons">
+              <a href="#" class="TopHeader-iconMenu" id="js-ShowMenu">
+                <i class="fa fa-bars"></i>
+              </a>
+              <a href="#" class="TopHeader-closeMenu" id="js-HiddenMenu">
+                <i class="fa fa-close"></i>
+              </a>
+            </div>
           </nav>
           <div class="MainMenu">
             <div class="MainMenu-social">
@@ -79,7 +84,7 @@
               </a>
             </div>
             <div class="MainMenu-search">
-              <a href="" class="MainMenu-iconSearch">
+              <a href="#" class="MainMenu-iconSearch" id="js-ShowSearch">
                 <i class="fa fa-search"></i>
               </a>
             </div>
@@ -321,6 +326,19 @@ mejor de ya sabes XD!</p>
           </div>
         </div>
       </footer>
+  </div>
+  <div class="SearchFix animated" id="js-SearchMenu">
+    <p class="SearchFix-icon" id="js-HiddenSearch">
+      <i class="fa fa-times"></i>
+    </p>
+    <div class="SearchFix-wrapper">
+      <form action="" class="SearchFix-form">
+        <input type="text" class="SearchFix-input" placeholder="Buscar...">
+      </form>
+    </div>
+    <div class="SearchFix-wrapper">
+      <div class="SearchFix-result"></div>
+    </div>
   </div>
   <script src="./assets/js/alexei.js"></script>
 </body>
