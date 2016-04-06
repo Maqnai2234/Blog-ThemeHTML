@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="Layout">
-      <nav class="FixMenu">
+      <nav class="FixMenu" id="js-Menu">
         <ul class="FixMenu-list">
           <li class="FixMenu-element">
             <a href="" class="FixMenu-link FixMenu-menuActive">Inicio</a>
@@ -29,7 +29,7 @@
           </li>
         </ul>
       </nav>
-      <div class="CoverFull" style="background: linear-gradient(to bottom, rgba(0,0,0,.77) 0%,rgba(0,0,0,0.35) 50%,rgba(0,0,0,0.77) 100%), url('./assets/images/coverFull.jpg'); background-size: cover;)">
+      <div class="CoverFull" style="background: linear-gradient(to bottom, rgba(0,0,0,.77) 0%,rgba(0,0,0,0.35) 50%,rgba(0,0,0,0.77) 100%), url('./assets/images/coverFull.jpg'); background-size: cover; background-attachment: fixed; ">
         <header class="Layout-header Layout-wrapper">
           <nav class="TopHeader">
             <ul class="TopHeader-list">
@@ -49,7 +49,7 @@
                 <a href="" class="TopHeader-link">Contacto</a>
               </li>
             </ul>
-            <a href="#" class="TopHeader-iconMenu">
+            <a href="#" class="TopHeader-iconMenu" id="js-ShowMenu">
               <i class="fa fa-bars"></i>
             </a>
           </nav>
@@ -251,14 +251,14 @@
               Sigueme
             </a>
           </div>
-          <div class="SuscribeWidget">
+          <div class="SuscribeWidget" id="mc_embed_signup">
             <h5 class="SuscribeWidget-mainText">Suscríbete ya!</h5>
             <p class="SuscribeWidget-subtitle">Únete ahora, para que puedas recibir lo
 mejor de ya sabes XD!</p>
-            <form action="" class="SuscribeWidget-form">
-              <input type="email" class="SuscribeWidget-input" placeholder="Email">
-              <input type="nombre" class="SuscribeWidget-input" placeholder="Nombre">
-              <input type="submit" class="SuscribeWidget-submit" value="ser parte">
+            <form class="SuscribeWidget-form validate" action="//alexeidev.us11.list-manage.com/subscribe/post?u=0c03af4b800f4af2026975753&amp;id=29d7a269db" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+              <input type="email" class="SuscribeWidget-input required email" placeholder="Email" name="EMAIL" id="mce-EMAIL">
+              <input type="nombre" class="SuscribeWidget-input" placeholder="Nombre" name="FNAME" id="mce-FNAME">
+              <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="SuscribeWidget-submit" value="ser parte">
             </form>
           </div>
         </div>
@@ -271,11 +271,11 @@ mejor de ya sabes XD!</p>
               <p class="text">Ruby - Javascript - HTML5 - CSS3 -Videojuegos - Nodejs</p>
             </div>
             <div class="MainFooter-col2">
-              <a href="">
+              <a href="http://www.vultr.com/?ref=6877234">
                 <img src="./assets/images/logoVultr.png" alt="Logo Vultr" class="imgLogoFooter">
               </a>
 
-              <p class="text">Publicado en <a href="#">Ghost</a> y Alojado en <a href="#">Vultr</a> </p>
+              <p class="text">Publicado en <a href="#">Ghost</a> y Alojado en <a href="http://www.vultr.com/?ref=6877234">Vultr</a> </p>
             </div>
           </div>
           <div class="MainFooter-bottom">
