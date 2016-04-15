@@ -15,9 +15,7 @@ var livereload = false;
 // Compila Styl a CSS
 gulp.task('stylus', function () {
   gulp.src('./assets/stylus/style.styl')
-    .pipe(stylus({
-      compress: true
-    }))
+    .pipe(stylus())
     .pipe(gulp.dest('./assets/css/'))
     .pipe(gulpif(livereload, connect.reload()))
 });

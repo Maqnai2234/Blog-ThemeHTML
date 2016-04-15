@@ -34,7 +34,7 @@
     height 100%
   &-footer
     background white
-    box-shadow 2px 2px 3px rgba(0,0,0,0.2)
+    box-shadow 0 -1px 1px rgba(0,0,0,.4)
   &-wrapper
     max-width 1100px
     margin 0 auto
@@ -54,15 +54,15 @@
   height 0
   overflow hidden
   transition .7s linear height
-  &-list
+  ul
     padding 1em 0
     margin 0
-  &-element
+  li
     list-style none
     display block
-  &-menuActive
+  .active
     color white !important
-  &-link
+  a
     color #d1d1d1
     text-decoration none
     text-transform uppercase
@@ -99,14 +99,19 @@
     width 33.333%
 
 .SocialLinks
-  &-icon
+  a
     color white
     text-decoration none
     font-size 1.5em
     padding-left .2em
+    &:hover
+      transform: scale(1.1);
   &--footer
-    color grey
-    font-size 1.5emro
+    a
+      color grey
+      font-size 1.5em
+      &:hover
+        transform: scale(1.1);
 
 .TopHeader
   align-self center
@@ -140,13 +145,21 @@
     text-transform lowercase
   &-title
     margin 0
+    font-size 2.3em
+    text-shadow: 2px 2px 0 #808080;
     a
       color white
       text-decoration none
       letter-spacing 1px
       font-size .9em
+      font-weight bolder
   &-single
     text-align center
+  &-description
+    color white
+    margin 0
+    padding 0
+    display none
 
 
 @media (min-width: 768px)
@@ -161,18 +174,18 @@
   .CoverFull
     height 60vh
   .TopHeader
-    &-list
+    ul
       display block
       padding 0
       margin-bottom 1em
-    &-element
+    li
       display inline-block
       padding 0
       margin 0
       padding-right 5em
       &:last-child
         padding-right 0
-    &-link
+    a
       color rgba(white,0.9)
       text-decoration none
       text-transform uppercase
@@ -180,6 +193,8 @@
       font-weight 400
       &:hover
         color rgba(white,.66)
+    .active
+      color white
     &-iconMenu
       display none
 
@@ -190,11 +205,16 @@
     &-details
       font-size 1em
     &-title
-      font-size 2.5rem
+      font-size 4.5rem
       margin .3em 0
+      line-height 3.5rem
     &-single
-      font-size 3.4rem
-      line-height 2.7rem
+      font-size 5.4rem
+      line-height 4.7rem
+      font-weight: bolder;
+    &-description
+      display block
+
 
 @media (min-width: 1024px)
   .CoverFull
@@ -210,6 +230,7 @@
   justify-content space-between
   flex-wrap nowrap
   flex-direction column
+  align-content flex-start
 .Sidebar
   padding .5em 1.4em
 
@@ -220,11 +241,18 @@
   margin 1em 0
   box-sizing border-box
   padding 1em
+  width 100%
   &-content
     line-height 1.8rem
     font-size 1.2rem
   &-social
     text-align center
+  img
+    max-width 100%
+    width auto
+    height auto
+    display block
+    margin 0 auto
 .tags
   background transparent
   display inline-block
@@ -272,7 +300,6 @@
   &-title
     font-weight 800
     margin .5em 0
-
     a
       text-decoration none
       color postTitleColor
@@ -317,13 +344,14 @@
     font-weight 500
     &:hover
       color #3d90f7
-  &-iconSocial
-    text-decoration none
-    font-size 1.5em
-    color postTextColor
-    transition 100ms all ease-in
-    &:hover
-      color: black;
+  &-social
+    a
+      text-decoration none
+      font-size 1.5em
+      color postTextColor
+      transition 100ms all ease-in
+      &:hover
+        color: black;
 
 .FeedSocial
   display flex
@@ -370,6 +398,10 @@
     font-weight 500
     font-size .9em
     font-family 'Kanit', sans-serif
+
+.WidgetText
+  margin-top 1em
+  text-align center
 
 .SuscribeWidget
   padding 1em
@@ -421,6 +453,7 @@
     width 70%
     padding 1em
     flex-wrap wrap
+    justify-content flex-start
   .Sidebar
     margin-top 1.4em
     width 320px
@@ -452,10 +485,10 @@
     text-align center
 
 .MenuFooter
-  &-list
+  ul
     display flex
     flex-wrap wrap
-  &-element
+  li
     list-style none
     width 50%
     a
@@ -470,6 +503,7 @@
     font-family 'Kanit', sans-serif
     font-size .9em
     margin 0
+    text-transform uppercase
 
 .Button
   &-more
@@ -534,6 +568,10 @@
     font-size 3em
     &:focus
       outline none
+  &-resultLink
+    font-size 1.5em
+    font-weight 600
+    display block
 
 
 // ************ Other
